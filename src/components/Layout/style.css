@@ -1,3 +1,26 @@
 header{
     padding: 5rem 0px;
 }
+.input-search-container{
+    position: relative;
+    margin: auto;
+
+    width: 50%;
+}
+.input-search{
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    width: 100%;
+}
+.icon-search,.clear-search{
+    position: absolute; 
+   inset:0 auto;
+    width: 3rem;
+}.icon-search{ right :0;
+}.clear-search{
+    cursor: pointer;
+     left :0;
+}
+
+
+

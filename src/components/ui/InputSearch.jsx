@@ -44,8 +44,24 @@ export default function InputSearch() {
     //   }
     // }, [term, result.length, prevTerm]);
   return (
-    <div className=''>
-      <input type="text" className='' />
+    <div className='input-search-container  flex m-auto justify-center items-center'>
+      <input type="text" className='input-search min-w-15 ' dir='rtl' />
+      <span className="icon-search  flex  justify-center items-center">
+              <img
+                src={"/assets/search.png"}
+                width={20}
+                height={20}
+                alt='icon search'
+              />
+            </span>
+            <span className="clear-search  flex  justify-center items-center">
+              <img
+                src={"/assets/Subtract.svg"}
+                width={15}
+                height={15}
+                alt='clear search'
+              />
+            </span>
     </div>
   )
 }

@@ -8,7 +8,7 @@ export default function Header() {
       <div className="cart-container flex item-center ">
        <CartCount/>
       </div>
-      <div className="search-container flex-1 justify-center ">
+      <div className="search-container flex-1 justify-center item-center ">
         <InputSearch />
       </div>
     </header>
