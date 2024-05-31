@@ -22,5 +22,23 @@ header{
      left :0;
 }
 
+.clear{
+    /* inset:0 auto; */
+    top:50%;
+    transform: translateY(-40%);
+    left :1px;  
+    border-radius: 99999px;
+    background: none;
+    border: none;
+    width: auto;
+    z-index: 999;
+    height: auto;
+    
+}
 
-
+  @media only screen and (max-width: 1024px) {
+    .input-search-container{
+        width: 90%;
+    }
+  }
+ 

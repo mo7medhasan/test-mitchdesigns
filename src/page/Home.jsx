@@ -1,6 +1,7 @@
 import React from 'react'
 import FilterCategory from '../components/ui/FilterCategory'
 import ProductsContainer from '../components/product-components/ProductsContainer'
+import BtnMore from '../components/ui/BtnMore'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       </h1>
       <FilterCategory />
        <ProductsContainer/>
+       <BtnMore />
     </div>
   )
 }

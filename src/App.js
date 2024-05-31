@@ -1,7 +1,10 @@
-import "./App.css";
-import Home from "./page/Home";
-import Layout from "./components/Layout";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { DataProvider } from "./DataContext";
+import Layout from "./components/Layout";
+import Home from "./page/Home";
+import "./App.css";
+
 function App() {
   return (
     <Router>
@@ -9,9 +12,11 @@ function App() {
         <Route
           path="/"
           element={
-            <Layout>
-              <Home />
-            </Layout>
+            <DataProvider>
+              <Layout>
+                <Home />
+              </Layout>
+            </DataProvider>
           }
         />
       </Routes>

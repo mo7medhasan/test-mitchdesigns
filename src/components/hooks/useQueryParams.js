@@ -13,7 +13,13 @@ const useQueryParams = () => {
   const key = getQueryParam('key', '');
 
   const updateQuery = (newQuery) => {
-    setSearchParams(newQuery);
+    setSearchParams((prevParams) => {
+      const newParams = new URLSearchParams(prevParams);
+      Object.entries(newQuery).forEach(([key, value]) => {
+        newParams.set(key, value);
+      });
+      return newParams;
+    });
   };
 
   return {

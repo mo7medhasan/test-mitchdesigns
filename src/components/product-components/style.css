@@ -1,0 +1,90 @@
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    overflow: hidden;
+
+}
+
+.card-container-img {
+    width: 100%;
+    height:60%;
+    padding: 20%;
+    background-color: var(--gray-300);
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: contain;
+}
+.card-container-content{
+    height: 40%;
+    max-width: 100%;
+}
+
+.zoom-icon,
+.btn,
+.card {
+    border: 2px solid #D9D9D9;
+}
+
+.zoom-icon {
+    left: 15px;
+
+    bottom: 15px;
+}
+
+.my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.price {
+    height: 1rem;
+    display: flex;
+
+}
+.clear-card{
+    top: 10px;
+    right:10px ;
+    border-radius: 99999px;
+    background: none;
+    border: none;
+    width: auto;
+    z-index: 999;
+    height: auto;
+    
+}
+.price strong {
+
+    font-size: 1.5rem;
+}
+
+
+  @media only screen and (max-width: 1024px) {
+    .products-container {
+        
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+     
+    }
+  }
+
+  @media only screen and (max-width: 820px) {
+    .products-container {
+        
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+     
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .products-container {
+        
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+     
+    }
+  }

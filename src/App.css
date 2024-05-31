@@ -11,7 +11,7 @@
 }
 * {
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
 }
 
 body {
@@ -19,7 +19,7 @@ body {
   background-color: rgb(var(--background));
   margin: 0;
   border-color: var(--gray-300) !important;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 5rem;
 }
 /* public class */
@@ -119,6 +119,8 @@ margin:0px auto;
 }
 .p-5 {
   padding: 1.25rem
+}.pl-5 {
+  padding-left: 1.5rem
 }
 .py-1 {
   padding-top: 0.25rem;
@@ -179,9 +181,9 @@ margin:0px auto;
   margin-top: 2.5rem;
 }
 .border {
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgb(var(--gray-300)) !important;
+  border: 2px solid var(--gray-300) ;
+}.border-1 {
+  border-width: 1px  ;
 }
 .border-y {
   border-width: 1px;
@@ -203,7 +205,7 @@ margin:0px auto;
 }
 .shadow {
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1);
-}
+}.bg-white { background-color: white;}
 .bg-primary {
   background-color: var(--primary);
 }
@@ -234,7 +236,7 @@ margin:0px auto;
   border-radius: 15%;
 }
 .rounded-lg {
-  border-radius: 0.5rem;
+  border-radius: 20px;
 }
 .text-sm {
   font-size: 0.875rem;
@@ -245,7 +247,7 @@ margin:0px auto;
   line-height: 1rem;
 }
 .text-primary {
-  color: var(--primary);
+  color: var(--primary) !important;
 }
 .text-gray,
 .text-gray * {
@@ -270,11 +272,25 @@ margin:0px auto;
   font-weight: 700;
 }
 .container {
-  max-width: 90%;
+  max-width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
-
+.relative{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
+.text-overflow{ 
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pointer{
+  cursor: pointer;
+}
 .badge {
   position: relative;
 }
