@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import ProductCard from './ProductCard';
+import React, { useEffect, useState } from "react";
+import ProductCard from "./ProductCard";
 import "./style.css";
 // import useQueryParams from '../hooks/useQueryParams';
-import { useDataContext } from '../../DataContext';
+import { useDataContext } from "../../DataContext";
 
 export default function ProductsContainer() {
-  const { products, loading } = useDataContext()
+  const { products, loading } = useDataContext();
 
   // const { category, limit, sort, key } = useQueryParams();
   // const [products, setProducts] = useState([]);
@@ -15,17 +15,17 @@ export default function ProductsContainer() {
   //   const fetchProducts = async () => {
   //     setLoading(true);
   //     try {
-  //       const response = await fetch('https://woosonicpwa.com/MitchAPI/filter.php', 
+  //       const response = await fetch('https://woosonicpwa.com/MitchAPI/filter.php',
   //       // {
   //         // method: 'POST',
   //         // headers: {
   //         //   "Content-Type": "application/json",
   //         // },
   //         // body: JSON.stringify({
-  //         //   // category: category || "", 
+  //         //   // category: category || "",
   //         //   price_range: [0, 100000000],
-  //         //   // products_per_page: limit, 
-  //         //   page: 1, 
+  //         //   // products_per_page: limit,
+  //         //   page: 1,
   //         //   sort: {
   //         //     criteria: sort || "date",
   //         //     arrangement: "DESC"
@@ -48,14 +48,19 @@ export default function ProductsContainer() {
   // }, [category, limit, sort, key]);
 
   return (
-    <div className='products-container'>
+    <>
       {loading ? (
-        <p>Loading...</p>
+        <div className="body">
+          {" "}
+          <div class="loader"></div>
+        </div>
       ) : (
-        products.map(product => (
+        <div className="products-container">
+         { products.map((product) => (
           <ProductCard key={product.id} product={product} />
-        ))
+          ))}
+        </div>
       )}
-    </div>
+    </>
   );
 }
